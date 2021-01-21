@@ -65,8 +65,10 @@ $(function () {
                     return layer.msg(res.message)
                 }
                 // 提示信息 跳转到主页面
-                layer.msg('恭喜您 登录成功')
+                layer.msg('恭喜您，登录成功! ')
+                // 保存token 未来的接口要使用token
                 localStorage.setItem('token', res.token);
+                // 跳转
                 location.href = "/index.html";
             }
         })
